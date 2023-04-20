@@ -18,7 +18,7 @@ const addOne = (arr) => {
   return myArray;
 
 };
-//new comment
+// new comment
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
