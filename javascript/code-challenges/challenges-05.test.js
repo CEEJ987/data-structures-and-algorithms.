@@ -13,9 +13,11 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
+  let peopleArr = people.map(element =>{
   return people.map(element => element.firstName + " " + element.lastName);
-};
-
+});
+return peopleArr;
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -25,9 +27,9 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
-  return arr.reduce((acc, value, idx) => {
-    return acc + val;
-  }, 0);
+
+  let total =  arr.reduce((total, sum) => total + sum, 0);
+  return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,11 +46,11 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
-  return arr.reduce((acc, value, idx) => {
-
-    return acc + value.purchasePrice;
+  let arraytotal = arr.reduce((acc, current) => {
+    return acc + current.purchasePrice;
   }, 0);
-};
+  return arraytotal;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -60,10 +62,16 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  return arr.reduce((acc, value, idx) => {
-    return idx + 1;
+  let arrayLength = arr.reduce ((acc, current) => {
+    if (current >= 0){
+      return acc + 1
+    }else{
+      acc + 0
+    }
   }, 0);
+  return arrayLength;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -124,8 +132,9 @@ let starWarsData = [{
 const returnNames = (arr) => {
   // Solution code here...
   let newArr = [];
-  arr.reduce((acc, value) => {
-    newArr.push(value.name);
+  arr.reduce((acc, current) => {
+    acc = current.name
+    newArr.push(acc);
   }, '');
   return newArr;
 };
@@ -140,10 +149,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
-  let arr = str.split("");
-  return arr.reduce((newstring, currentLetter) => {
+  let array = str.split("");
+  let String = array.reduce((newstring, currentLetter) => {
     return currentLetter + newstring;
-  },"");
+  },"")
+  return String;
 };
 
 /* ------------------------------------------------------------------------------------------------
