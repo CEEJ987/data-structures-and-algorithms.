@@ -89,7 +89,6 @@ const allHappy = (arr) => {
   return arr.every(str => str.includes(':)'));
 
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
