@@ -8,6 +8,10 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 
 const replaceZeros = (string) => {
   // Solution code here...
+  let zeroRegex = /0/g;
+  return string.replaceAll(zeroRegex, 'zero');
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,6 +24,8 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 
 const validatePin = (pin) => {
   // Solution code here...
+  let pinRegex = /^\d{4}$/;
+  return pinRegex.test(pin);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +38,8 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 
 const validateWord = (word) => {
   // Solution code here...
+  let fiveToTenRegex = /^\D{5,10}$/;
+  return fiveToTenRegex.test(word);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +52,8 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
+  let hadNumberRegex = /\D+\d+/;
+  return hadNumberRegex.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,6 +74,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  let validEmailRegex = /^\w+\.?\w+@\w+\.(net|com|org)$/;
+  return validEmailRegex.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,6 +101,9 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  let validPhoneNumberRegex = /^(\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$/;
+  return validPhoneNumberRegex.test(phoneNumber);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
